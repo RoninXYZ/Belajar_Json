@@ -1,0 +1,11 @@
+{
+    "nama": "sandika",
+    "umur": 34,
+    "nip": "04304567",
+    "lulus": true,
+    "hoby" :["mancing" , "game"],
+    "pembimbing":{
+     "pembimbing1":"dody firmansyah",
+     "pembimbing2":"dick doang"
+    }
+}

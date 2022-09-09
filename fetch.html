@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>XML http request</title>
+    
+    <script>
+      var txt = " ";
+      async function getUsers() {
+        let response = await fetch(
+          "https://jsonplaceholder.typicode.com/users"
+        );
+        let data = await response.json();
+        return data;
+      }
+      let alfa = (data)=>{
+        for( x in data ){
+          txt += data[x].name + "<br/> ";
+         document.getElementById("demo").innerHTML= txt ;
+
+      }}
+
+      let alfa1 = (data)=>{
+        for( x in data ){
+          txt += data[x].username + "<br/> ";
+         document.getElementById("demo1").innerHTML= txt ;
+
+      }
+    }
+    
+      
+      getUsers().then(data => console.log(data));
+      getUsers().then(data =>alfa(data) );
+      getUsers().then(data =>alfa1(data) );
+    </script>
+  </head>
+
+  <body>
+    <div id="demo"></div>
+    <div id="demo1"></div>
+  </body>
+</html>
